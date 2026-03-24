@@ -1,16 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Web App Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Tranquil — Food Ordering System</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #FFF8F0; color: #2C1810; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .hero { text-align: center; padding: 60px 24px; }
+    .logo { font-size: 64px; margin-bottom: 16px; }
+    h1 { font-size: 48px; font-weight: 800; color: #4A2C2A; margin-bottom: 8px; }
+    .subtitle { font-size: 18px; color: #8B5E3C; margin-bottom: 48px; }
+    .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .card { background: white; border-radius: 20px; padding: 40px 32px; min-width: 260px; box-shadow: 0 4px 20px rgba(74,44,42,0.12); text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; border: 2px solid transparent; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(74,44,42,0.2); border-color: #D4AF37; }
+    .card-icon { font-size: 48px; margin-bottom: 16px; }
+    .card h2 { font-size: 22px; font-weight: 700; color: #4A2C2A; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: #888; line-height: 1.5; }
+    .badge { display: inline-block; margin-top: 16px; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .badge-user { background: #FFF3E0; color: #E65100; }
+    .badge-admin { background: #E8F5E9; color: #2E7D32; }
+    .badge-api { background: #E3F2FD; color: #1565C0; }
+    footer { margin-top: 48px; font-size: 13px; color: #aaa; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the Web App Homepage</h1>
-  <nav>
-    <ul>
-      <li><a href="admin.html">Admin Page</a></li>
-      <li><a href="user.html">User Page</a></li>
-      <li><a href="manager.html">Manager Page</a></li>
-    </ul>
-  </nav>
+  <div class="hero">
+    <div class="logo">☕</div>
+    <h1>Café Tranquil</h1>
+    <p class="subtitle">Premium Food Ordering System</p>
+    <div class="cards">
+      <a class="card" href="http://localhost:3000" target="_blank" rel="noopener">
+        <div class="card-icon">🛍️</div>
+        <h2>Customer App</h2>
+        <p>Browse menu, place orders, track delivery in real-time</p>
+        <span class="badge badge-user">React App · Port 3000</span>
+      </a>
+      <a class="card" href="http://localhost:3001" target="_blank" rel="noopener">
+        <div class="card-icon">📊</div>
+        <h2>Admin Dashboard</h2>
+        <p>Manage orders, menu, customers, analytics &amp; more</p>
+        <span class="badge badge-admin">React App · Port 3001</span>
+      </a>
+      <a class="card" href="http://localhost:5000/api" target="_blank" rel="noopener">
+        <div class="card-icon">⚙️</div>
+        <h2>Backend API</h2>
+        <p>REST API with Socket.io real-time, JWT auth &amp; MongoDB</p>
+        <span class="badge badge-api">Node.js · Port 5000</span>
+      </a>
+    </div>
+    <footer>
+      <p>See <strong>README.md</strong> for setup instructions</p>
+    </footer>
+  </div>
 </body>
 </html>
